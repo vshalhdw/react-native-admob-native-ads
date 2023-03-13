@@ -88,10 +88,7 @@ public class Utils {
 
     public static void setMediationOptions(ReadableMap options, AdManagerAdRequest.Builder adRequest) {
         if (options == null) return;
-        if (options.hasKey("nativeBanner")) {
-            Bundle facebookExtras = new FacebookExtras().setNativeBanner(options.getBoolean("nativeBanner")).build();
-            adRequest.addNetworkExtrasBundle(FacebookAdapter.class, facebookExtras);
-        }
+        if (options.hasKey("nativeBanner")) {}
     }
 
     public static void setRequestNonPersonalizedAdsOnly(boolean npa, AdManagerAdRequest.Builder adRequest) {
